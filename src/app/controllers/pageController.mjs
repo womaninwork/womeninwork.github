@@ -4,10 +4,6 @@ export const index = (req, res) => {
   };
   
   
-export const divulgacao = (req, res) => {
-  res.render('pages/divulgacao', { pageTitle: 'divulgação' });
-};
-
 export const ca_aut = (req, res) => {
   res.render('pages/ca_aut', { pageTitle: 'cadastro autonomo' });
 };

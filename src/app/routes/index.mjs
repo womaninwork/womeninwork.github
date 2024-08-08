@@ -1,6 +1,5 @@
 import express from 'express';
 import { index,
-    divulgacao,
     ca_aut,
     cadastro,
     cadastroProf,
@@ -14,7 +13,6 @@ import { index,
 const router = express.Router();
 
 router.get('/', index);
-router.get('/divulgacao', divulgacao);
 router.get('/ca_aut', ca_aut);
 router.get('/cadastro', cadastro);
 router.get('/cadastro_prof', cadastroProf);
