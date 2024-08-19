@@ -2,10 +2,11 @@
   "name": "womeninwork.github",
   "version": "1.0.0",
   "description": "https://womaninwork.github.io/womeninwork.github/",
-  "main": "index.mjs",
+  "main": "src/app/app.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon src/app/app.js", 
+    "start": "node src/app/app.js",   
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
