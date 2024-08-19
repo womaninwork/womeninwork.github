@@ -1,9 +1,11 @@
 import express from 'express';
-import sqlite3 from 'sqlite3';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import router from './routes/index.mjs';
+
+// Usando require para sqlite3
+const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
 const dbPath = 'wiwork.db';
@@ -22,7 +24,7 @@ db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     senha TEXT NOT NULL
 )`, (err) => {
     if (err) {
-        console.error('coloque um email não existente:', err.message);
+        console.error('Erro ao criar tabela de usuários:', err.message);
     } else {
         console.log('Tabela de usuários criada com sucesso.');
     }
@@ -67,6 +69,5 @@ app.get('/users', (req, res) => {
         }
     });
 });
-
 
 export default app;
