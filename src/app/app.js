@@ -2,10 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import router from './routes/index.mjs';
+import sqlite3 from 'sqlite3'; // Importando sqlite3
+import router from './routes/index.js'; // Ajuste para a extensão .js se for um módulo ES
 
-// Usando require para sqlite3
-const sqlite3 = require('sqlite3').verbose();
+// Usando sqlite3
+sqlite3.verbose();
 
 const app = express();
 const dbPath = 'wiwork.db';
@@ -43,7 +44,7 @@ app.set('view engine', 'ejs');
 // Definir o diretório de views
 app.set('views', path.join(__dirname, 'views'));
 
-// Usar as rotas definidas no arquivo index.mjs
+// Usar as rotas definidas no arquivo index.js
 app.use('/', router);
 
 app.post('/register', (req, res) => {
