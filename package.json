@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "https://womaninwork.github.io/womeninwork.github/",
   "main": "src/app/app.js",
+
   "scripts": {
     "dev": "nodemon src/app/app.js", 
     "start": "node src/app/app.js",   
