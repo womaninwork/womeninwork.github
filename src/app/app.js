@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import sqlite3 from 'sqlite3'; // Importando sqlite3
-import router from './routes/index.js'; // Ajuste para a extensão .js se for um módulo ES
+import router from './routes/index.mjs'; // Ajuste para a extensão .js se for um módulo ES
 
 // Usando sqlite3
 sqlite3.verbose();
@@ -69,6 +69,11 @@ app.get('/users', (req, res) => {
             res.json(rows);
         }
     });
+});
+
+const PORT = process.env.PORT || 3000; // Use uma porta padrão ou uma variável de ambiente
+app.listen(PORT, () => {
+    console.log(`Servidor está rodando na porta ${PORT}`);
 });
 
 export default app;
