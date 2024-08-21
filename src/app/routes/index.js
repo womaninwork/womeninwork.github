@@ -1,5 +1,6 @@
-import express from 'express';
-import { index,
+const express = require('express');
+const {
+    index,
     ca_aut,
     cadastro,
     cadastroProf,
@@ -7,8 +8,8 @@ import { index,
     cursos2,
     marketingCursos,
     perfilAut,
-    sobrenos 
-} from '../controllers/pageController.mjs';
+    sobrenos
+} = require('../controllers/pageController.js'); // Ajuste a extensão se necessário
 
 const router = express.Router();
 
@@ -22,7 +23,4 @@ router.get('/marketing-cursos', marketingCursos);
 router.get('/perfil_aut', perfilAut);
 router.get('/sobrenos', sobrenos);
 
-
-
-
-export default router;
+module.exports = router;
