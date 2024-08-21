@@ -20,6 +20,7 @@ body {
 .container {
     background-color: #fafafa;
     border-radius: 5px;
+    border: 2px solid #fafafa;
     width: 450px;
     max-width: 100%;
 }
@@ -30,9 +31,10 @@ body {
 
 .header h2 {
     font-weight: 600;
-    color: purple;
+    color: #6c62e0;
     font-size: 30px;
 }
+
 .form {
     padding: 0 40px 30px;
 }
@@ -46,14 +48,16 @@ body {
 .form-control label {
     display: inline-block;
     margin-bottom: 5px;
-    color: rgb(107, 107, 107);
+    color: black;
 }
 
 .form-control input {
-    border: 2px solid rgb(255, 155, 170);
+    border: 2px solid #d3606e;
     border-radius: 5px;
     outline: 0;
+
     display: block;
+
     font-size: 14px;
 
     width: 100%;
@@ -97,7 +101,7 @@ body {
 }
 
 .form button {
-    background-color: rgb(255, 147, 163);
+    background-color: #ec808d;
     border-radius: 5px;
     color: #fff;
     padding: 15px;
@@ -111,6 +115,6 @@ body {
 }
 
 .form button:hover {
-    background-color: lightpink;
+    background-color: #b34e5a;
     transition: 0.3s;
 }
