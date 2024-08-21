@@ -1,6 +1,12 @@
-const express = require("express");
-const app = express();
-const env = require("dotenv").config();
+import express from 'express';
+import bodyParser from 'body-parser';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import sqlite3 from 'sqlite3'; // Importando sqlite3
+import router from './routes/index.mjs'; // Ajuste para a extensão .js se for um módulo ES
+
+// Usando sqlite3
+sqlite3.verbose();
 
 const app = express();
 const dbPath = 'wiwork.db';
@@ -65,9 +71,5 @@ app.get('/users', (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3000; // Use uma porta padrão ou uma variável de ambiente
-app.listen(PORT, () => {
-    console.log(`Servidor está rodando na porta ${PORT}`);
-});
 
 export default app;
